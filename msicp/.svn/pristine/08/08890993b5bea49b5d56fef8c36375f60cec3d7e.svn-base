@@ -1,0 +1,52 @@
+.\" $Id: msicp.cfg.5,v 1.1.1.1 2006/08/31 22:40:45 hari Exp $
+.TH msicp.cfg 5 15.07.2002 msicp "Sip Express Router" 
+.\" Process with
+.\" groff -man -Tascii msicp.cfg.5 
+.\"
+.SH NAME
+msicp.cfg \- msicp configuration file
+.SH SYNOPSIS
+.I /etc/msicp/msicp.cfg
+.SH DESCRIPTION
+.B msicp
+reads the configuration data from
+.I /etc/msicp/msicp.cfg
+(or the file specified with
+.B \-f
+on the command line).
+The file contains global configuration parameters, module loading commands and the script that will be executed for each received request. Lines starting with
+.B #
+or enclosed in
+.B /* ... */
+are interpreted as comments.
+.PP
+This manual page is incomplete. For further information please read the
+.I Ser User Guide (http://www.iptel.org/msicp/admin.html).
+
+.SH FILES
+.bL
+.I /etc/msicp/msicp.cfg
+.br
+
+.SH AUTHORS
+
+see 
+.B /usr/share/doc/msicp/AUTHORS
+
+.SH SEE ALSO
+.BR msicp(8)
+.PP
+Full documentation on msicp, including configuration guidelines, FAQs and
+licensing conditions, is available at
+.I http://www.iptel.org/msicp/.
+.PP
+For reporting  bugs see
+.I
+http://www.iptel.org/msicp/bugs/.
+.PP
+Mailing lists:
+.nf 
+serusers@iptel.org - msicp user community
+.nf 
+serdev@iptel.org - msicp development, new features and unstable version
+

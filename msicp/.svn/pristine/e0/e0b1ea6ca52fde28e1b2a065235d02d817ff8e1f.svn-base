@@ -1,0 +1,7 @@
+$Id: README,v 1.1.1.1 2006/08/31 22:40:56 hari Exp $
+
+This is very simple example module that shows how to
+use database interface.
+
+If you want to compile this module, move it to modules
+directory.

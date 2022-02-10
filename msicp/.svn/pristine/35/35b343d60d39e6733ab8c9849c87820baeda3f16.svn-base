@@ -1,0 +1,22 @@
+<!-- Domain Module Developer's Guide -->
+
+<chapter>
+    <chapterinfo>
+	<revhistory>
+	    <revision>
+		<revnumber>$Revision: 1.1.1.1 $</revnumber>
+		<date>$Date: 2006/08/31 22:40:52 $</date>
+	    </revision>
+	</revhistory>
+    </chapterinfo>
+    <title>Developer's Guide</title>
+    <para>
+	To be done.
+    </para>
+</chapter>
+
+<!-- Keep this element at the end of the file
+Local Variables:
+sgml-parent-document: ("domain.sgml" "book" "chapter")
+End:
+-->

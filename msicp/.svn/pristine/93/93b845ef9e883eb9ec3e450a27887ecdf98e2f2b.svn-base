@@ -1,0 +1,82 @@
+Source: msicp
+Section: net
+Priority: optional
+Maintainer: Andrei Pelinescu-Onciul <andrei@iptel.org>
+Build-Depends: debhelper (>= 4), libmysqlclient-dev | libmysqlclient14-dev | libmysqlclient12-dev, libexpat1-dev, libradiusclient-ng-dev | libradius1-dev, libxml2-dev, libpq-dev | postgresql-dev
+Standards-Version: 3.5.2
+
+Package: msicp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
+Suggests: msicp-mysql-module, msicp-jabber-module, msicp-cpl-module, msicp-pa-module, msicp-radius-modules
+Conflicts: msicp-mysql-module (<< ${Source-Version}), msicp-jabber-module (<< ${Source-Version}), msicp-radius-modules (<< ${Source-Version}), msicp-cpl-module (<< ${Source-Version}), msicp-pa-module (<< ${Source-Version}), msicp-postgres-module (<< ${Source-Version}), msicp-acc-db-module (<< ${Source-Version}), msicp-acc-radius-module (<< ${Source-Version})
+Description: Sip Express Router, very fast and configurable SIP proxy
+ msicp or SIP Express Router is a very fast and flexible SIP (RFC3621)
+ proxy server. Written entirely in C, msicp can handle thousands calls
+ per second even on low-budget hardware. C Shell like scripting language
+ provides full control over the server's behaviour. It's modular
+ architecture allows only required functionality to be loaded.
+ Currently the following modules are available: Digest Authentication,
+ CPL scripts, Instant Messaging, MySQL support, Presence Agent, Radius
+ Authentication, Record Routing, SMS Gateway, Jabber Gateway, Transaction 
+ Module, Registrar and User Location.
+
+Package: msicp-mysql-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the MySQL database connectivity module
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libmysqlclient. This module will enable you to use the digest
+ authentication module or persistent user location entries.
+
+Package: msicp-jabber-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the Jabber module (SIP-Jabber message translation)
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libexpat. This module will enable you to use msicp to translate
+ SIP messages into Jabber messages.
+
+Package: msicp-cpl-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the cpl-c module (CPL support)
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libxml2.
+
+Package: msicp-pa-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the pa module (Presence server support)
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libxml2.
+
+Package: msicp-radius-modules
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the msicp RADIUS modules 
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libradius1. This modules will enable you to authenticate, 
+ do group membership checking or check the messages uris using RADIUS.
+
+Package: msicp-postgres-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the PostgreSQL database connectivity module
+ This has been split out of the main msicp package, so that msicp will not
+ depend upon libpq. This module will enable you to use the digest
+ authentication module or persistent user location entries.
+
+Package: msicp-acc-db-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Suggests: msicp-mysql-module
+Description: contains the msicp acc module, with db support 
+ This modules will enable you to do accounting in a database. 
+ You need also a database interface module like MySQL or PostgreSQL.
+
+Package: msicp-acc-radius-module
+Architecture: any
+Depends: ${shlibs:Depends}, msicp (= ${Source-Version})
+Description: contains the msicp acc module, with RADIUS support 
+ This modules will enable you to do accounting over radius. 

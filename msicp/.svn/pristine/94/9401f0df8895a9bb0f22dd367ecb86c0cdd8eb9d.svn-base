@@ -1,0 +1,113 @@
+[wsfifo]
+name=/home/wsadmin/wsmsicp/msicp_fifo_db
+count=16
+#who=208.77.4.79:5080
+who=10.20.8.132:5080
+omsserver=10.20.8.27:6070
+omsserver1=10.20.8.17:6070
+mysqlerror=1015,1037,1040,1043,1053,1165,1177,1179,1184,1192,1194,1196,1223,2003,2055,2013,2008,2006,2055
+pulserate=6.0
+intllookupflag = 1
+internalbilling = 1
+singlecdrtable = 0
+keepactivecallrecord = 0
+serviceid = 1001
+retrymysqlerror=1213
+queryretrycount=3
+missedcall_sleep = 1
+missedcall_querytime = 1
+terminating_useragent = Worksmart Router
+ws_ctccall_flag = 0
+datacenter_id = 1
+fwd_delay_time = 75000
+servertz = -07:00
+Reporting_flag = 1
+Commonseat = 21
+Virtual_Seat = 29
+Business_Voice_Basic = 30
+LcrCallType = 50
+TransferCallType=51
+CancelAnotherCalltype=55
+nRoutingPlanEXT_calltype = 8
+IntTemplateTable = acc_int_pst_month_year
+IntTablePrefix = int_pst_
+enable_sleep_patch = 0
+spam_reject_code = 607
+callerid_block_reject_code = 607
+stir_name=/home/wsadmin/wsmsicp/stir_fifo_db
+stir_count=5
+endpoint_cdr_template_name = endpoint_details
+endpoint_cdr_prefix = endpoint_details_
+
+[live]
+host=10.20.48.101
+user=wsadmin
+pwd=worksmart
+dbname=livepbx
+
+[live1]
+host=10.20.48.100
+user=wsadmin
+pwd=worksmart
+dbname=livepbx
+
+[warehouse]
+host=10.20.48.105
+user=wsadmin
+pwd=worksmart
+dbname=warehousepbx
+
+[warehouse1]
+host=10.20.48.38
+user=wsadmin
+pwd=worksmart
+dbname=warehousepbx
+
+[activetransactions]
+host=10.20.48.101
+user=wsadmin
+pwd=worksmart
+dbname=livepbx
+
+[activetransactions1]
+host=10.20.48.100
+user=wsadmin
+pwd=worksmart
+dbname=livepbx
+
+[presence]
+connectionflag=2
+primary_presence_ip=10.20.8.121
+primary_presence_port=8892
+secondary_presence_ip=10.20.8.122
+secondary_presence_port=8892
+ping_interval=15
+failure_ping_interval=10
+nonblockmode=1
+
+
+
+[wspartners]
+host=10.20.48.105
+user=wsadmin
+pwd=worksmart
+dbname=wspartners
+
+[wspartners1]
+host=10.20.48.38
+user=wsadmin
+pwd=worksmart
+dbname=wspartners
+
+
+[contacts]
+host=10.20.48.105
+user=wsadmin
+pwd=worksmart
+dbname=contactsdb
+
+[contacts1]
+host1=10.20.48.103
+user1=wsadmin
+pwd1=worksmart
+dbname1=contactsdb

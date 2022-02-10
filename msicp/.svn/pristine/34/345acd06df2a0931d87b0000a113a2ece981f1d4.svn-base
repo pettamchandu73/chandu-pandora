@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 2002 Frauenhofer Gesellschaft FOKUS, Germany.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /usr/local/cvsroot/msicp-1.3/fifocore/gentoo/msicp.init,v 1.1.1.1 2006/08/31 22:40:54 hari Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting msicp"
+	start-stop-daemon --start --quiet --pidfile /var/run/msicp.pid \
+		--exec /usr/sbin/msicp -- -P /var/run/msicp.pid
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping msicp"
+	start-stop-daemon --stop --quiet --pidfile /var/run/msicp.pid
+	eend $?
+}
+
